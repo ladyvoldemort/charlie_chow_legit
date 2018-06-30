@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Card, Header } from 'semantic-ui-react';
+import { Container, Card, Header, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Image } from 'semantic-ui-react';
@@ -29,8 +29,9 @@ class Menu extends Component {
               <Card key={item.id}>
               <Card.Content>
                 <Card.Header>{item.name}</Card.Header>
-                <Card.Meta>{item.price}</Card.Meta>
-                <h3>{item.spicy}</h3>
+                <Card.Meta>${item.price}</Card.Meta>
+            
+                <Button>Add to Cart</Button>
               </Card.Content>
               </Card>
             )
