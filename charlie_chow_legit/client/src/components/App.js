@@ -11,6 +11,7 @@ import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import About from './About';
 import Menu from './Menu';
+import ShoppingCart from './ShoppingCart'
 
 class App extends Component {
   render() {
@@ -20,7 +21,8 @@ class App extends Component {
         <Flash />
         <FetchUser>
           <Switch>
-            <Route exact path='/' component={Home} />
+            {/* TODO put Home back */}
+            <Route exact path='/' component={ShoppingCart} />
             <Route exact path='/about' component={About} />
             <Route exact path='/menu' component={Menu} />
             <AuthRoute exact path='/login' component={Login} />
