@@ -14,16 +14,18 @@ import Menu from './Menu';
 import ShoppingCart from './ShoppingCart';
 import AdminPage from './AdminPage';
 
+
 class App extends Component {
   render() {
     return (
       <div>
+      
         <NavBar />
         <Flash />
         <FetchUser>
           <Switch>
             {/* TODO put Home back */}
-            <Route exact path='/' component={ShoppingCart} />
+            <Route exact path='/' component={Home} />
             <Route exact path='/about' component={About} />
             <Route exact path='/menu' component={Menu} />
             <AuthRoute exact path='/login' component={Login} />
@@ -32,6 +34,7 @@ class App extends Component {
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
+       
       </div>
     );
   }
