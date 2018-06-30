@@ -11,7 +11,8 @@ import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import About from './About';
 import Menu from './Menu';
-import ShoppingCart from './ShoppingCart'
+import ShoppingCart from './ShoppingCart';
+import AdminPage from './AdminPage';
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path='/menu' component={Menu} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
+            <ProtectedRoute exact path='/Admin' component={AdminPage} />
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
